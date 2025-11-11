@@ -1,0 +1,9 @@
+.footer {
+ text-align: center;
+  background-color: #007b5e;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 30px; /* thoda gap upar se */
+  position: static; /* fixed hata do */
+}

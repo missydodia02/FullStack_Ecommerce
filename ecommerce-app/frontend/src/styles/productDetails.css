@@ -1,0 +1,97 @@
+.product-details {
+  display: flex;
+  
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.product-details img {
+  width: 470px;
+  height: 470px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+  max-width: 500px;
+  text-align: left;
+}
+
+.details h1{
+  color: #000000;
+}
+
+.category {
+  font-style: italic;
+  color: gray;
+}
+
+.description {
+  margin: 15px 0;
+  line-height: 1.3;
+  font-style: italic;
+  font-size: 15x;
+}
+
+.price {
+  color: #007b5e;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.add-btn {
+  background-color: #007b5e;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #bdba07;
+  transform: scale(1.05);
+}
+
+
+
+.product-features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.1);
+}
+
+.feature-icon {
+  font-size: 28px;
+  color: #046350;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 13px;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
