@@ -71,8 +71,10 @@ function Home() {
             <img src={p.imageUrl} alt={p.title} />
             <h3>{p.title}</h3>
             <p>₹ {p.price}</p>
+            <div className="button-group">
             <button className="add-to-cart-btn" onClick={e => handleAddToCart(p, e)}>Add to Cart</button>
             <button className="buy-now-btn" onClick={e => handleBuyNow(p, e)}>Buy Now</button>
+            </div>
           </Link>
         ))}
       </div>

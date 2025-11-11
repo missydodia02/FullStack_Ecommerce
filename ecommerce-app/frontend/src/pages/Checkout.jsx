@@ -1,12 +1,10 @@
 
-
-
-
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { placeOrder as placeOrderAPI } from "../services/api";
 import { removeFromCart } from "../redux/cartSlice";
+import "../styles/checkout.css";
 
 function Checkout() {
   const location = useLocation();
@@ -69,46 +67,56 @@ function Checkout() {
     }
   };
 
-  return (
-    <div style={{ maxWidth: "600px", margin: "auto" }}>
-      <h2>Checkout</h2>
-      <h3>Delivery Address</h3>
-      <textarea
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-        placeholder="Enter delivery address"
-        rows={4}
-        style={{ width: "100%" }}
+return (
+  <div className="checkout-container">
+    <h2>Checkout</h2>
+
+    {/* Address Section */}
+    <h3>Delivery Address</h3>
+    <textarea
+      value={address}
+      onChange={(e) => setAddress(e.target.value)}
+      placeholder="Enter delivery address"
+      rows={4}
+      className="address-input"
+    />
+
+    {/* Promo Code Section */}
+    <h3>Promo Code</h3>
+    <div className="promo-section">
+      <input
+        type="text"
+        value={promoCode}
+        onChange={(e) => setPromoCode(e.target.value)}
+        placeholder="Enter promo code"
+        className="promo-input"
       />
+      <button className="apply-btn" onClick={applyPromo}>Apply</button>
+    </div>
 
-      <h3>Promo Code</h3>
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
-        <input
-          type="text"
-          value={promoCode}
-          onChange={(e) => setPromoCode(e.target.value)}
-          placeholder="Enter promo code"
-          style={{ flex: 1 }}
-        />
-        <button onClick={applyPromo}>Apply</button>
-      </div>
-
-      <h3>Products:</h3>
+    {/* Products List */}
+    <h3>Products:</h3>
+    <div className="products-list">
       {products.map((p) => (
-        <div key={p.id}>
+        <div key={p.id} className="product-item">
           {p.title} x {p.quantity} = ₹ {Math.round(p.price * 88 * p.quantity)}
         </div>
       ))}
+    </div>
 
+    {/* Totals Section */}
+    <div className="total-section">
       <h3>Total: ₹ {Math.round(totalBeforeDiscount)}</h3>
       {discount > 0 && <h4>Discount: -₹ {Math.round(discount)}</h4>}
       <h3>Final Total: ₹ {Math.round(totalBeforeDiscount - discount)}</h3>
-
-      <button onClick={handlePlaceOrder} style={{ marginTop: "20px" }}>
-        Place Order
-      </button>
     </div>
-  );
+
+    {/* Place Order Button */}
+    <button className="place-order-btn" onClick={handlePlaceOrder}>
+      Place Order
+    </button>
+  </div>
+);
 }
 
 export default Checkout;

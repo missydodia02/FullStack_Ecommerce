@@ -1,16 +1,18 @@
 /* ===== HEADER CONTAINER ===== */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
-  color: #046350;
-  padding: 12px 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  background-color: #046350;
+  color: white;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* ===== LOGO SECTION ===== */
-.logo {
+.logo-section {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -18,7 +20,7 @@
 
 .appicon {
   font-size: 3rem;
-  color: #046350;
+  color: #ffffff;
 }
 
 .logo-text {
@@ -29,116 +31,17 @@
 
 .logo-text .logo {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  margin: 0;
 }
 
 .logo-text .tagline {
   font-size: 0.8rem;
-  color: #918a8a;
+  color: #dcdde1;
+  font-style: italic;
 }
 
 /* ===== NAV ICONS ===== */
-.nav-icons {
-  display:flex;
-  align-items:start;
-}
-
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;             /* icon ko center me lane ke liye */
-  align-items: center;
-  justify-content: center;
-  padding: 0;                /* default padding hata di */
-}
-
-.icon {
-  color: #046350;
-  font-size: 30px;           
-  margin: 0 10px;
-  transition: transform 0.3s, color 0.3s;
-  vertical-align: middle;    /* icon line ke center me aaye */
-}
-
-.home_icon{
-  color: #046350;
-  font-size: 31px;           
-  margin: 0 7px;
-  transition: transform 0.3s, color 0.3s;
-  vertical-align: middle;
-
-}
-.home_icon:hover{
-   transform: scale(1.2);
-  color: #000000;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-  color: #000000;
-}
-
-
-/* ===== MOBILE RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .logo-text .tagline {
-    display: none;
-  }
-
-  .icon {
-    font-size: 1.3rem;
-  }
-}
-/* .............. */
-
-.cart-container {
-  position: relative;
-}
-
-.cart-badge {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background-color: rgb(200, 147, 147);
-  color: rgb(47, 8, 8);
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
-}.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #0a3d62;
-  color: white;
-  padding: 10px 25px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.appicon {
-  font-size: 2rem;
-  color: #ffdd59;
-}
-
-.logo-text .logo {
-  font-size: 1.4rem;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 0.8rem;
-  color: #dcdde1;
-}
-
 .nav-icons {
   display: flex;
   align-items: center;
@@ -149,29 +52,53 @@
   position: relative;
 }
 
-.icon {
+.icon, .home_icon {
   font-size: 1.6rem;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
-  color: white;
+  color: rgb(255, 255, 255);
+  vertical-align: middle;
+  margin: 0 10px;
 }
 
-.icon:hover {
-  color: #ffdd59;
+.home_icon {
+  font-size: 1.8rem;
+  margin: 0 7px;
+}
+
+.icon:hover, .home_icon:hover {
+  color: #fafa03;
   transform: scale(1.1);
 }
 
 .active {
-  color: #ffdd59;
+  font-size: 1.9rem;
+  color: #ffffff;
+}
+
+/* ===== CART BADGE ===== */
+.cart-container {
+  position: relative;
 }
 
 .cart-badge {
   position: absolute;
-  top: -6px;
-  right: -10px;
-  background: red;
-  color: white;
-  font-size: 0.7rem;
+  top: -14px;
+  right: -5px;
+  background: rgb(239, 131, 164);
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
   border-radius: 50%;
   padding: 3px 6px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .logo-text .tagline {
+    display: none;
+  }
+
+  .icon, .home_icon {
+    font-size: 1.3rem;
+  }
 }
