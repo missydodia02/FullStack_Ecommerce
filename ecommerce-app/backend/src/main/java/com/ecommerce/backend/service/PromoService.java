@@ -18,7 +18,7 @@ public class PromoService {
         this.repo = repo;
     }
 
-    // ✅ Validate promo code
+    // Validate promo code
     public PromoCode validatePromo(String code) {
         if (code == null || code.trim().isEmpty()) return null;
 
@@ -33,7 +33,7 @@ public class PromoService {
                 .orElse(null);
     }
 
-    // ✅ Calculate discount
+    //Calculate discount
     public double calculateDiscountAmount(Optional<PromoCode> promoOpt, double totalAmount) {
         if (promoOpt == null || promoOpt.isEmpty()) return 0.0;
         PromoCode p = promoOpt.get();

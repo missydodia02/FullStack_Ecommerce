@@ -30,7 +30,7 @@ public class ProductService {
         return repo.findByCategory(category);
     }
 
-    // ✅ New: Search products by name (case-insensitive)
+    // Search products by name (case-insensitive)
     public List<Product> searchByName(String name) {
         if (name == null || name.isEmpty()) return getAllProducts();
         String lower = name.toLowerCase();
@@ -39,7 +39,7 @@ public class ProductService {
                 .collect(Collectors.toList());
     }
 
-    // ✅ New: Filter by price range
+    // Filter by price range
     public List<Product> filterByPrice(Double min, Double max) {
         return repo.findAll().stream()
                 .filter(p -> {

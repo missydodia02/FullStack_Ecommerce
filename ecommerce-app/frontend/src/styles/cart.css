@@ -1,6 +1,6 @@
-.cart-container {
-  max-width: 800px;
-  margin: 20px auto;
+/* .cart-container {
+  max-width: 900px;
+  margin: 30px auto;
   padding: 15px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -8,7 +8,7 @@
 }
 
 .cart-container h2 {
-  color: #046350;
+  color: #306143;
   margin-bottom: 15px;
   text-align: center;
 }
@@ -16,15 +16,15 @@
 .cart-items {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 }
 
 .cart-item {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: flex-start;
   border: 1px solid #dfd4d4;
-  padding: 10px;
+  padding: 200px;
   border-radius: 10px;
   background-color: #f9f9f9;
 }
@@ -46,25 +46,25 @@
 .item-info h4 {
   font-size: 16px;
   margin: 0;
-  color: #046350;
+  color: #306143;
 }
 
 .item-info p {
   font-weight: bold;
   margin: 0;
-  color: #046350;
+  color: #306143;
 }
 
 .qty-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .qty-controls button {
   width: 30px;
   height: 30px;
-  background-color: #046350;
+  background-color: #306143;
   color: white;
   border: none;
   border-radius: 5px;
@@ -74,7 +74,7 @@
 }
 
 .qty-controls button:hover {
-  background-color: #034d35;
+  background-color: #306143;
 }
 
 .remove-btn,
@@ -91,22 +91,22 @@
 }
 
 .remove-btn {
-  background-color: #ff4d4f;
+  background-color: #ff8183;
   color: white;
 }
 
 .remove-btn:hover {
-  background-color: #d93638;
+  background-color: #e37a7c;
   transform: scale(1.05);
 }
 
 .buy-now-btn {
-  background-color: #046350;
+  background-color: #306143;
   color: white;
 }
 
 .buy-now-btn:hover {
-  background-color: #034d35;
+  background-color: #306143;
   transform: scale(1.05);
 }
 
@@ -125,11 +125,11 @@
 }
 
 .checkout-all-btn {
-  background-color: #046350;
+  background-color: #306143;
 }
 
 .checkout-all-btn:hover {
-  background-color: #034d35;
+  background-color: #306143;
   transform: scale(1.05);
 }
 
@@ -143,7 +143,7 @@
 }
 
 /* Responsive for smaller screens */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .cart-item {
     flex-direction: column;
     align-items: center;
@@ -157,4 +157,4 @@
   .clear-cart-btn {
     width: 100%;
   }
-}
+} */ 

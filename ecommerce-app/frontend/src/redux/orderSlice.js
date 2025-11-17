@@ -1,30 +1,21 @@
-
-
-
 import { createSlice } from "@reduxjs/toolkit";
 
-// ✅ Initial state: load from localStorage if exists
-const initialState = { orders: JSON.parse(localStorage.getItem("orders")) || [] };
+const initialState = {
+  orders: []
+};
 
 const orderSlice = createSlice({
   name: "orders",
   initialState,
   reducers: {
     placeOrder: (state, action) => {
-      const newOrder = action.payload;
-      state.orders.push(newOrder);
-
-      // ✅ Save ONLY the orders array to localStorage
-      localStorage.setItem("orders", JSON.stringify(state.orders));
+      state.orders.push(action.payload);
     },
-    loadOrdersFromLocalStorage: (state) => {
-      const saved = JSON.parse(localStorage.getItem("orders"));
-      if (saved) {
-        state.orders = saved;
-      }
+    loadOrders: (state, action) => {
+      state.orders = action.payload || [];
     },
   },
 });
 
-export const { placeOrder, loadOrdersFromLocalStorage } = orderSlice.actions;
+export const { placeOrder, loadOrders } = orderSlice.actions;
 export default orderSlice.reducer;

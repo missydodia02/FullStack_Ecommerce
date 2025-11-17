@@ -54,7 +54,7 @@ public class DataSeeder implements CommandLineRunner {
                     JSONObject obj = arr.getJSONObject(i);
 
                     Product p = new Product();
-                    // ❌ ID should NOT be set manually if it's auto-generated
+                    // ID should NOT be set manually if it's auto-generated
                     p.setTitle(obj.getString("title"));
                     p.setDescription(obj.getString("description"));
                     p.setCategory(obj.getString("category"));
